@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   title: "Book My Event",
   description: "Platform for event management",
   icons: {
+    icon: '/assets/images/logo.svg'
   }
 };
 
