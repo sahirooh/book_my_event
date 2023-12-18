@@ -8,10 +8,10 @@ const Header = () => {
       <div className="wrapper flex items-center justify-between">
         <Link href="/" className="w-36">
           {/* <Image src="/assets/images/logo.svg" alt="logo" width={128} height={36} /> */}
-          <h1>
-            <span className="text-red-500">B</span>ook
-            <span className="text-red-500">M</span>y
-            <span className="text-red-500">E</span>vent
+          <h1 className="text-lg font-medium">
+            <span className="text-red-500 font-semibold">B</span>ook
+            <span className="text-red-500 font-semibold">M</span>y
+            <span className="text-red-500 font-semibold">E</span>vent
           </h1>
         </Link>
       </div>
