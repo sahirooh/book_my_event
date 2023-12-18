@@ -1,6 +1,8 @@
+import { SignedOut } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { Button } from "../ui/button";
 
 const Header = () => {
   return (
@@ -14,6 +16,14 @@ const Header = () => {
             <span className="text-red-500 font-semibold">E</span>vent
           </h1>
         </Link>
+
+        <div>
+          <SignedOut>
+            <Button asChild className="rounded-full" size="lg">
+              <Link href="/signin">Login</Link>
+            </Button>
+          </SignedOut>
+        </div>
       </div>
     </header>
   );
