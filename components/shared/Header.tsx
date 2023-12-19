@@ -4,6 +4,7 @@ import Link from "next/link";
 import React from "react";
 import { Button } from "../ui/button";
 import NavItems from "./NavItems";
+import MobileNav from "./MobileNav";
 
 const Header = () => {
   return (
@@ -19,7 +20,7 @@ const Header = () => {
         </Link>
 
         <SignedIn>
-          <nav className="">
+          <nav className="md:flex md:justify-between md:items-center hidden w-full max-w-xs">
             <NavItems />
           </nav>
         </SignedIn>
@@ -27,7 +28,7 @@ const Header = () => {
         <div>
           <SignedIn>
             <UserButton afterSignOutUrl="/" />
-            <NavItems />
+            <MobileNav />
           </SignedIn>
           <SignedOut>
             <Button asChild className="rounded-full" size="lg">
