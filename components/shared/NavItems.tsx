@@ -2,7 +2,9 @@ import React from 'react'
 
 const NavItems = () => {
   return (
-    <div>NavItems</div>
+    <ul className='md:flex-between flex'>
+        
+    </ul>
   )
 }
 
