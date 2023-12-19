@@ -1,8 +1,9 @@
-import { SignedOut } from "@clerk/nextjs";
+import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { Button } from "../ui/button";
+import NavItems from "./NavItems";
 
 const Header = () => {
   return (
@@ -17,10 +18,20 @@ const Header = () => {
           </h1>
         </Link>
 
+        <SignedIn>
+          <nav className="">
+            <NavItems />
+          </nav>
+        </SignedIn>
+
         <div>
+          <SignedIn>
+            <UserButton afterSignOutUrl="/" />
+            <NavItems />
+          </SignedIn>
           <SignedOut>
             <Button asChild className="rounded-full" size="lg">
-              <Link href="/signin">Login</Link>
+              <Link href="/sign-in">Login</Link>
             </Button>
           </SignedOut>
         </div>
