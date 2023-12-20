@@ -11,7 +11,6 @@ const Header = () => {
     <header className="w-full border-b ">
       <div className="wrapper flex items-center justify-between">
         <Link href="/" className="w-36">
-          {/* <Image src="/assets/images/logo.svg" alt="logo" width={128} height={36} /> */}
           <h1 className="text-lg font-medium">
             <span className="text-red-500 font-semibold">B</span>ook
             <span className="text-red-500 font-semibold">M</span>y
