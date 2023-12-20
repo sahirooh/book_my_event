@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -14,7 +13,7 @@ const Footer = () => {
           </h1>
         </Link>
 
-        <p>2023 BookMyEvent. All Rights Reserved</p>
+        <p>2023 BookMyEvent. All Rights Reserved.</p>
       </div>
     </footer>
   );
