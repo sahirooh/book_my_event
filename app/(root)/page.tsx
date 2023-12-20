@@ -1,4 +1,6 @@
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -8,11 +10,22 @@ export default function Home() {
           <h1 className="h1-bold">
             Host, Connect, Celebrate: Your Events, Our Platform!
           </h1>
-          <p>
+          <p className="p-regular-20 md:p-regular-24">
             Book and learn helpful tips from 4k+ mentors in world-class
             companies with our global community
           </p>
+          <Button size='lg' asChild className="button w-full sm:w-fit">
+            <Link href="#events">Explore Events</Link>
+          </Button>
         </div>
+
+        <Image
+        src='/assets/images/hero.png'
+        alt="hero"
+        width={1000}
+        height={1000}
+        className="max-h-[70vh] object-contain object-center 2xl:max-h-[50vh]"
+        />
       </div>
     </section>
   );
