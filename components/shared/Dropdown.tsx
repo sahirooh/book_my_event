@@ -1,14 +1,29 @@
-import React from 'react'
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 type DropdownProps = {
-    value?: string;
-    onChangeHandler?: () => void;
-}
+  value?: string;
+  onChangeHandler?: () => void;
+};
 
-const Dropdown = ({value, onChangeHandler}: DropdownProps) => {
+const Dropdown = ({ value, onChangeHandler }: DropdownProps) => {
   return (
-    <div>Dropdown</div>
-  )
-}
+    <Select>
+      <SelectTrigger className="w-[180px]">
+        <SelectValue placeholder="Theme" />
+      </SelectTrigger>
+      <SelectContent>
+        <SelectItem value="light">Light</SelectItem>
+        <SelectItem value="dark">Dark</SelectItem>
+        <SelectItem value="system">System</SelectItem>
+      </SelectContent>
+    </Select>
+  );
+};
 
-export default Dropdown
+export default Dropdown;
