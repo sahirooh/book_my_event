@@ -26,9 +26,7 @@ type DropdownProps = {
 };
 
 const Dropdown = ({ value, onChangeHandler }: DropdownProps) => {
-  const [categories, setCategories] = useState<ICategory[]>([{
-    _id: "1", name: "Category 1",
-  }]);
+  const [categories, setCategories] = useState<ICategory[]>([]);
 
   return (
     <Select onValueChange={onChangeHandler} defaultValue={value}>
@@ -38,10 +36,30 @@ const Dropdown = ({ value, onChangeHandler }: DropdownProps) => {
       <SelectContent>
         {categories.length > 0 &&
           categories.map((category) => (
-            <SelectItem className="select-item p-regular-14" key={category._id} value={category._id}>
+            <SelectItem
+              className="select-item p-regular-14"
+              key={category._id}
+              value={category._id}
+            >
               {category.name}
             </SelectItem>
           ))}
+        <AlertDialog>
+          <AlertDialogTrigger>Open</AlertDialogTrigger>
+          <AlertDialogContent>
+            <AlertDialogHeader>
+              <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+              <AlertDialogDescription>
+                This action cannot be undone. This will permanently delete your
+                account and remove your data from our servers.
+              </AlertDialogDescription>
+            </AlertDialogHeader>
+            <AlertDialogFooter>
+              <AlertDialogCancel>Cancel</AlertDialogCancel>
+              <AlertDialogAction>Continue</AlertDialogAction>
+            </AlertDialogFooter>
+          </AlertDialogContent>
+        </AlertDialog>
       </SelectContent>
     </Select>
   );
