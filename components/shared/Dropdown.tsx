@@ -7,6 +7,18 @@ import {
 } from "@/components/ui/select";
 import { ICategory } from "@/lib/database/models/category.model";
 import { useState } from "react";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
+
 
 type DropdownProps = {
   value?: string;
@@ -14,18 +26,22 @@ type DropdownProps = {
 };
 
 const Dropdown = ({ value, onChangeHandler }: DropdownProps) => {
-  
-  const [categories, setCategories] = useState<ICategory[]>([]);
-  
+  const [categories, setCategories] = useState<ICategory[]>([{
+    _id: "1", name: "Category 1",
+  }]);
+
   return (
     <Select onValueChange={onChangeHandler} defaultValue={value}>
       <SelectTrigger className="select-field">
         <SelectValue placeholder="Category" />
       </SelectTrigger>
       <SelectContent>
-        <SelectItem value="light">Light</SelectItem>
-        <SelectItem value="dark">Dark</SelectItem>
-        <SelectItem value="system">System</SelectItem>
+        {categories.length > 0 &&
+          categories.map((category) => (
+            <SelectItem className="select-item p-regular-14" key={category._id} value={category._id}>
+              {category.name}
+            </SelectItem>
+          ))}
       </SelectContent>
     </Select>
   );
