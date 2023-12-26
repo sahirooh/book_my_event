@@ -18,6 +18,7 @@ import { Input } from "@/components/ui/input";
 import { eventFormSchema } from "@/lib/validator";
 import { eventDefaultValues } from "@/constants";
 import Dropdown from "./Dropdown";
+import { Textarea } from "../ui/textarea";
 
 type EventFormProps = {
   userId: string;
@@ -88,10 +89,10 @@ const EventForm = ({ userId, type }: EventFormProps) => {
             render={({ field }) => (
               <FormItem className="w-full">
                 <FormControl>
-                  <Input
-                    placeholder="Event Title"
+                  <Textarea
+                    placeholder="Description"
                     {...field}
-                    className="input-field"
+                    className="textarea rounded-2xl"
                   />
                 </FormControl>
                 <FormMessage />
