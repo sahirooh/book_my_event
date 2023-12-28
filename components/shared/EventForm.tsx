@@ -169,7 +169,10 @@ const EventForm = ({ userId, type }: EventFormProps) => {
                     <DatePicker
                       selected={field.value}
                       onChange={(date: Date) => field.onChange(date)}
-                      className="ml-3" />
+                      showTimeSelect
+                      timeInputLabel="Time:"
+                      dateFormat='MM/DD/YYYY h:mm aa'
+                      wrapperClassName="datePicker" />
                   </div>
                 </FormControl>
                 <FormMessage />
