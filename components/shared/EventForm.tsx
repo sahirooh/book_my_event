@@ -129,7 +129,7 @@ const EventForm = ({ userId, type }: EventFormProps) => {
             render={({ field }) => (
               <FormItem className="w-full">
                 <FormControl>
-                  <div>
+                  <div className="flex-center h-[54px] w-full overflow-hidden rounded-full bg-gray-50 px-4 py-2">
                     <Image
                       src="/assets/icons/location-grey.svg"
                       alt="calendar"
@@ -137,10 +137,10 @@ const EventForm = ({ userId, type }: EventFormProps) => {
                       height={24}
                     />
                     <Input
-                      placeholder="Event Title"
+                      placeholder="Event Location"
                       {...field}
                       className="input-field"
-                    />
+                    /> 
                   </div>
                 </FormControl>
                 <FormMessage />
