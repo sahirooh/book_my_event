@@ -32,7 +32,6 @@ type EventFormProps = {
 
 const EventForm = ({ userId, type }: EventFormProps) => {
   const [files, setFiles] = useState<File[]>([]);
-  const [startDate, setStartDate] = useState(new Date());
   const initialValues = eventDefaultValues;
 
   const form = useForm<z.infer<typeof eventFormSchema>>({
@@ -167,7 +166,10 @@ const EventForm = ({ userId, type }: EventFormProps) => {
                       className="filter-grey"
                     />
                     <p className="ml-3 whitespace-nowrap text-grey-600">Start Date</p>
-                    
+                    <DatePicker
+                      selected={field.value}
+                      onChange={(date: Date) => field.onChange(date)}
+                      className="ml-3" />
                   </div>
                 </FormControl>
                 <FormMessage />
