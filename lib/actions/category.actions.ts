@@ -16,3 +16,15 @@ import Category from "../database/models/category.model"
         handleError(error)
     }
  }
+
+ export const getAllCategories = async () => {
+    try {
+        await connectToDatabase();
+
+        const categories = await Category.find();
+
+        return JSON.parse(JSON.stringify(categories));
+    } catch (error) {
+        handleError(error)
+    }
+ }
