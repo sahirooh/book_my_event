@@ -235,23 +235,35 @@ const EventForm = ({ userId, type }: EventFormProps) => {
                     <p className="ml-3 whitespace-nowrap text-grey-600">
                       End Date
                     </p>
-                    <Input type="number" placeholder="Price" {...field} className="p-regular-16 border-0 bg-grey-50 outline-offset-0 focus:border-0 focus-visible:ring-0 focus-visible:ring-offset-0" />
-                  </div>
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-
-          <FormField
-            control={form.control}
-            name="isFree"
-            render={({ field }) => (
-              <FormItem >
-                <FormControl>
-                  <div className="flex items-center">
-                    <label className="whitespace-nowrap pr-3 leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" htmlFor="isFree">Free Ticket</label>
-                    <Checkbox />
+                    <Input
+                      type="number"
+                      placeholder="Price"
+                      {...field}
+                      className="p-regular-16 border-0 bg-grey-50 outline-offset-0 focus:border-0 focus-visible:ring-0 focus-visible:ring-offset-0"
+                    />
+                    <FormField
+                      control={form.control}
+                      name="isFree"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormControl>
+                            <div className="flex items-center">
+                              <label
+                                className="whitespace-nowrap pr-3 leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                                htmlFor="isFree"
+                              >
+                                Free Ticket
+                              </label>
+                              <Checkbox
+                                id="isFree"
+                                className="mr-2 h-5 w-5 border-2 border-primary-500"
+                              />
+                            </div>
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
                   </div>
                 </FormControl>
                 <FormMessage />
