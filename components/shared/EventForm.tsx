@@ -205,7 +205,7 @@ const EventForm = ({ userId, type }: EventFormProps) => {
                       onChange={(date: Date) => field.onChange(date)}
                       showTimeSelect
                       timeInputLabel="Time:"
-                      dateFormat="MM/DD/YYYY h:mm aa"
+                      dateFormat="mm/dd/yyyy h:mm aa"
                       wrapperClassName="datePicker"
                     />
                   </div>
@@ -237,7 +237,7 @@ const EventForm = ({ userId, type }: EventFormProps) => {
                       onChange={(date: Date) => field.onChange(date)}
                       showTimeSelect
                       timeInputLabel="Time:"
-                      dateFormat="MM/DD/YYYY h:mm aa"
+                      dateFormat="mm/dd/yyyy h:mm aa"
                       wrapperClassName="datePicker"
                     />
                   </div>
@@ -263,9 +263,6 @@ const EventForm = ({ userId, type }: EventFormProps) => {
                       height={24}
                       className="filter-grey"
                     />
-                    <p className="ml-3 whitespace-nowrap text-grey-600">
-                      End Date
-                    </p>
                     <Input
                       type="number"
                       placeholder="Price"
@@ -335,7 +332,7 @@ const EventForm = ({ userId, type }: EventFormProps) => {
           className="button col-span-2 w-full"
           type="submit"
         >
-          {form.formState.isSubmitting ? "Submitting..." : `${type} Event}`}
+          {form.formState.isSubmitting ? "Submitting..." : `${type} Event`}
         </Button>
       </form>
     </Form>
