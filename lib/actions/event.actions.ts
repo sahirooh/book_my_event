@@ -5,6 +5,13 @@ import { connectToDatabase } from "../database"
 import { handleError } from "../utils"
 import User from "../database/models/user.model"
 import Event from "../database/models/event.model"
+import Category from "../database/models/category.model"
+
+const populateEvent = async (query: any) => {
+  return query
+    .populate({path: 'organizer', model: User, select: '_id firstName lastName'})
+    .populate({path: 'category', model: Category, select: '_id name'})
+}
 
 export async function createEvent({ userId, event, path }: CreateEventParams) {
   try {
