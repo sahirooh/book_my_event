@@ -34,6 +34,7 @@ export default function Home() {
           Search
           CategoryFilter
         </div>
+        <Collection />
       </section>
     </>
   );
