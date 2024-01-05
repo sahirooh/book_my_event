@@ -1,4 +1,5 @@
 import { IEvent } from '@/lib/database/models/event.model'
+import Link from 'next/link'
 
 type CardProps = {
     event: IEvent,
@@ -9,7 +10,7 @@ type CardProps = {
 const Card = ({event, hasOrderLink, hidePrice}: CardProps) => {
   return (
     <div className='group relative flex min-h-[380px] w-full max-w-[400px] flex-col overflow-hidden rounded-xl bg-white shadow-md transition-all hover:shadow-lg md:min-h-[440px]'>
-        
+        <Link href={`/events/${event._id}`} style={{backgroundImage: `url(${event.imageUrl})`}} className='flex-center flex-grow bg-grey-50 bg-cover bg-center text-grey-500' ></Link>
     </div>
   )
 }
