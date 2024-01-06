@@ -3,7 +3,7 @@ import { formatDateTime } from "@/lib/utils";
 import { auth } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
-import DeleteConfirm from "./DeleteConfirm";
+import {DeleteConfirm} from "./DeleteConfirm";
 
 type CardProps = {
   event: IEvent;
