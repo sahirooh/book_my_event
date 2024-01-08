@@ -36,6 +36,19 @@ const ProfilePage = () => {
           </Button>
         </div>
       </section>
+
+      <section className="wrapper my-8">
+        <Collection
+          data={events?.data}
+          emptyTitle="No events created yet"
+          emptyStateSubtext="Create event now!"
+          collectionType="Events_Organized"
+          limit={6}
+          page={1}
+          urlParamName="eventsPage"
+          totalPages={2}
+        />
+      </section>
     </>
   );
 };
