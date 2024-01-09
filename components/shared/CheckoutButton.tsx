@@ -1,10 +1,15 @@
-import { IEvent } from '@/lib/database/models/event.model'
-import React from 'react'
+"use client";
 
-const CheckoutButton = ({event}: {event: IEvent}) => {
-  return (
-    <div>CheckoutButton</div>
-  )
-}
+import { IEvent } from "@/lib/database/models/event.model";
+import { useUser } from "@clerk/nextjs";
+import React from "react";
 
-export default CheckoutButton
+const CheckoutButton = ({ event }: { event: IEvent }) => {
+  const { user } = useUser();
+  const userId = user?.publicMetadata.userId as string;
+  const hasEventFinished = new Date(event.endDateTime) < new Date();
+
+  return <div className="flex items-center gap-3">CheckoutButton</div>;
+};
+
+export default CheckoutButton;
