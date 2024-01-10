@@ -1,9 +1,18 @@
-import React from 'react'
+import React from "react";
+import { Button } from "../ui/button";
+import { IEvent } from "@/lib/database/models/event.model";
 
-const Checkout = () => {
+const Checkout = ({ event, userId }: { event: IEvent; userId: string }) => {
+  const onCheckout = async () => {
+    console.log("checkout");
+  };
   return (
-    <div>Checkout</div>
-  )
-}
+    <form action={onCheckout} method="post">
+      <Button type="submit" role="link" size="lg" className="button sm:w-fit">
+        {event.isFree ? "Get Tickets" : "Buy Ticket"}
+      </Button>
+    </form>
+  );
+};
 
-export default Checkout
+export default Checkout;
