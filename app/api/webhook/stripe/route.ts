@@ -1,3 +1,5 @@
+import { NextResponse } from "next/server";
+
 const eventType = event?.type;
 
 if(eventType === 'checkout.session.completed') {
@@ -10,5 +12,6 @@ if(eventType === 'checkout.session.completed') {
         totalAmout: amount_total ? (amount_total / 100).toString() : '0',
         createdAt: new Date(),
     }
-    
+
+    const newOrder = await createOrder(order)
 }
