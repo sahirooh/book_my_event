@@ -1,8 +1,9 @@
 "use server";
 
 import Stripe from "stripe";
-import { CheckoutOrderParams } from "@/types";
+import { CheckoutOrderParams, CreateOrderParams } from "@/types";
 import { redirect } from "next/navigation";
+import { handleError } from "../utils";
 
 export const checkoutOrder = async (order: CheckoutOrderParams) => {
   const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
@@ -36,3 +37,11 @@ export const checkoutOrder = async (order: CheckoutOrderParams) => {
     throw error;
   }
 };
+
+export const createOrder = async (order: CreateOrderParams) => {
+  try {
+    
+  } catch (error) {
+    handleError(error);
+  }
+}
