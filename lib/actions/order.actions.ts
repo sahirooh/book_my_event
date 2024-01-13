@@ -59,7 +59,11 @@ export const createOrder = async (order: CreateOrderParams) => {
 export async function getOrdersByUser({userId, limit = 3, page}: GetOrdersByUserParams) {
   try {
     await connectToDatabase();
-    
+
+    const skipAmount = (Number(page) - 1) * limit;
+    const conditions = { buyer: userId };
+
+    const orders = await Order.distinct('event._id')
   } catch (error) {
     handleError(error);
   }
