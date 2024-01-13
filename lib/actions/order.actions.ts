@@ -1,7 +1,7 @@
 "use server";
 
 import Stripe from "stripe";
-import { CheckoutOrderParams, CreateOrderParams } from "@/types";
+import { CheckoutOrderParams, CreateOrderParams, GetOrdersByUserParams } from "@/types";
 import { redirect } from "next/navigation";
 import { handleError } from "../utils";
 import { connectToDatabase } from "../database";
@@ -51,6 +51,15 @@ export const createOrder = async (order: CreateOrderParams) => {
     })
 
     return JSON.parse(JSON.stringify(newOrder));
+  } catch (error) {
+    handleError(error);
+  }
+}
+
+export async function getOrdersByUser({userId, limit = 3, page}: GetOrdersByUserParams) {
+  try {
+    await connectToDatabase();
+    
   } catch (error) {
     handleError(error);
   }
