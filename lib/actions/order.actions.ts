@@ -58,6 +58,15 @@ export const createOrder = async (order: CreateOrderParams) => {
   }
 }
 
+export async function getOrdersByEvent({searchString, eventId}: GetOrdersByUserParams) {
+  try {
+    await connectToDatabase();
+    
+  } catch (error) {
+    handleError(error);
+  }
+}
+
 export async function getOrdersByUser({userId, limit = 3, page}: GetOrdersByUserParams) {
   try {
     await connectToDatabase();
