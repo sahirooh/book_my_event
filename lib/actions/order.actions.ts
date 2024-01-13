@@ -7,6 +7,7 @@ import { handleError } from "../utils";
 import { connectToDatabase } from "../database";
 import Order from "../database/models/order.model";
 import Event from "../database/models/event.model";
+import User from "../database/models/user.model";
 
 export const checkoutOrder = async (order: CheckoutOrderParams) => {
   const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
@@ -72,8 +73,14 @@ export async function getOrdersByUser({userId, limit = 3, page}: GetOrdersByUser
     .populate({
       path: 'event',
       model: Event,
-      
+      populate: {
+        path: 'organizer',
+        model: User,
+        select: '_id firstName lastName',
+      }
     })
+
+
   } catch (error) {
     handleError(error);
   }
