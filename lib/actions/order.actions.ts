@@ -6,6 +6,7 @@ import { redirect } from "next/navigation";
 import { handleError } from "../utils";
 import { connectToDatabase } from "../database";
 import Order from "../database/models/order.model";
+import Event from "../database/models/event.model";
 
 export const checkoutOrder = async (order: CheckoutOrderParams) => {
   const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
@@ -64,6 +65,15 @@ export async function getOrdersByUser({userId, limit = 3, page}: GetOrdersByUser
     const conditions = { buyer: userId };
 
     const orders = await Order.distinct('event._id')
+    .find(conditions)
+    .sort({createdAt: 'desc'})
+    .skip(skipAmount)
+    .limit(limit)
+    .populate({
+      path: 'event',
+      model: Event,
+      
+    })
   } catch (error) {
     handleError(error);
   }
