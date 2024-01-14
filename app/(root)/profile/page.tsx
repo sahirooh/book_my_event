@@ -29,7 +29,7 @@ const ProfilePage = async () => {
 
       <section className="wrapper my-8">
         <Collection
-          data={organizedEvents?.data}
+          data={orderedEvents}
           emptyTitle="No event ticktes purchased yet"
           emptyStateSubtext="No worries - plenty of events to choose from!"
           collectionType="My_Tickets"
