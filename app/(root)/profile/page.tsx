@@ -2,6 +2,7 @@ import Collection from "@/components/shared/Collection";
 import { Button } from "@/components/ui/button";
 import { getEventsByUser } from "@/lib/actions/event.actions";
 import { getOrdersByUser } from "@/lib/actions/order.actions";
+import { IOrder } from "@/lib/database/models/order.model";
 import { auth } from "@clerk/nextjs";
 import Link from "next/link";
 import React from "react";
@@ -11,6 +12,8 @@ const ProfilePage = async () => {
   const userId = sessionClaims?.userId as string;
 
   const orders = await getOrdersByUser({userId, page: 1})
+
+  const orderedEvents = orders?.data.map((order: IOrder) => order.event) || [];
   const organizedEvents = await getEventsByUser({ userId, page: 1 });
 
   return (
