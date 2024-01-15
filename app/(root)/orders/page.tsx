@@ -9,7 +9,11 @@ const OrdersPage = async ({searchParams}: SearchParamProps) => {
   const orders = await getOrdersByEvent({eventId, searchString: searchText})
   
   return (
-    <div>OrdersPage</div>
+    <>
+    <section className='bg-primary-50 bg-dotted-pattern bg-cover bg-center py-5 md:py-10'>
+      <h3 className='wrapper h3-bold text-center sm:text-left'>Orders</h3>
+    </section>
+    </>
   )
 }
 
