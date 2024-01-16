@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Search = () => {
+const Search = ({placeholder} :{placeholder: string}) => {
   return (
     <div>Search</div>
   )
