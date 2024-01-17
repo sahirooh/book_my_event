@@ -21,8 +21,7 @@ const Search = ({ placeholder }: { placeholder: string }) => {
     } else {
       const newUrl = removeKeysFromQuery({
         params: searchParams.toString(),
-        key: "query",
-        value: query,
+        keysToRemove: ['query']
       });
     }
     }, 300)
