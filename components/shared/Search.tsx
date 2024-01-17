@@ -18,6 +18,12 @@ const Search = ({ placeholder }: { placeholder: string }) => {
         key: 'query',
         value: query
       })
+    } else {
+      const newUrl = formUrlQuery({
+        params: searchParams.toString(),
+        key: "query",
+        value: query,
+      });
     }
     }, 300)
   }, [query])
