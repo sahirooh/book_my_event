@@ -26,7 +26,7 @@ const Search = ({ placeholder }: { placeholder: string }) => {
       });
     }
 
-
+    router.push(newUrl, {scroll: false})
     }, 300)
   }, [query])
   return (
