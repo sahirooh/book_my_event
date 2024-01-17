@@ -13,6 +13,7 @@ const Search = ({ placeholder }: { placeholder: string }) => {
 
   useEffect(() => {
     const delayDebounceFn = setTimeout(() => {
+      let newUrl = '';
     if(query){
       const newUrl = formUrlQuery({
         params: searchParams.toString(),
@@ -28,7 +29,9 @@ const Search = ({ placeholder }: { placeholder: string }) => {
 
     router.push(newUrl, {scroll: false})
     }, 300)
-  }, [query])
+
+    return () => clearTimeout(delayDebounceFn);
+  }, [query, searchParams, router])
   return (
     <div className="flex-center min-h-[54px] w-full overflow-hidden rounded-full bg-grey-50 px-4 py-2">
       <Image src='/assets/icons/search.svg' alt="search" width={24} height={24} />
