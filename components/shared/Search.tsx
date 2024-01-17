@@ -4,11 +4,12 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { Input } from "../ui/input";
 import { formUrlQuery, removeKeysFromQuery } from "@/lib/utils";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
 const Search = ({ placeholder }: { placeholder: string }) => {
   const [query, setQuery] = useState("");
   const searchParams = useSearchParams();
+  const router = useRouter();
 
   useEffect(() => {
     const delayDebounceFn = setTimeout(() => {
@@ -24,6 +25,8 @@ const Search = ({ placeholder }: { placeholder: string }) => {
         keysToRemove: ['query']
       });
     }
+
+
     }, 300)
   }, [query])
   return (
