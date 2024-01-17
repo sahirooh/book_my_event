@@ -3,7 +3,7 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { Input } from "../ui/input";
-import { formUrlQuery } from "@/lib/utils";
+import { formUrlQuery, removeKeysFromQuery } from "@/lib/utils";
 import { useSearchParams } from "next/navigation";
 
 const Search = ({ placeholder }: { placeholder: string }) => {
@@ -19,7 +19,7 @@ const Search = ({ placeholder }: { placeholder: string }) => {
         value: query
       })
     } else {
-      const newUrl = formUrlQuery({
+      const newUrl = removeKeysFromQuery({
         params: searchParams.toString(),
         key: "query",
         value: query,
