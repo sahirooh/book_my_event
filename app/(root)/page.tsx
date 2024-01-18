@@ -14,8 +14,8 @@ const category = (searchParams?.category as string) || '';
 
   const events = await getAllEvents({
     query: searchText,
-    category: '',
-    page: 1,
+    category,
+    page,
     limit: 6,
   });
 
