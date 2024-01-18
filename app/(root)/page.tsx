@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default async function Home({searchParams}: SearchParamProps) {
+const page = Number(searchParams?.page) || 1;
 
   const events = await getAllEvents({
     query: '',
