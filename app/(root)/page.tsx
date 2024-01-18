@@ -10,8 +10,10 @@ export default async function Home({searchParams}: SearchParamProps) {
 const page = Number(searchParams?.page) || 1;
 const searchText = (searchParams?.query as string) || '';
 const category = (searchParams?.category as string) || '';
+
+
   const events = await getAllEvents({
-    query: '',
+    query: searchText,
     category: '',
     page: 1,
     limit: 6,
