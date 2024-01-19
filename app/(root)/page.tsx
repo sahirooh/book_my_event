@@ -1,3 +1,4 @@
+import CategoryFilter from "@/components/shared/CategoryFilter";
 import Collection from "@/components/shared/Collection";
 import Search from "@/components/shared/Search";
 import { Button } from "@/components/ui/button";
@@ -53,7 +54,7 @@ const category = (searchParams?.category as string) || '';
         </h2>
         <div className="flex w-full flex-col gap-5 md:flex-row">
           <Search />
-          
+          <CategoryFilter />
         </div>
         <Collection
           data={events?.data}
