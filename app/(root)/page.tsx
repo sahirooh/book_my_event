@@ -53,7 +53,7 @@ const category = (searchParams?.category as string) || '';
         </h2>
         <div className="flex w-full flex-col gap-5 md:flex-row">
           <Search />
-           CategoryFilter
+          
         </div>
         <Collection
           data={events?.data}
