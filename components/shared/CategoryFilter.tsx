@@ -9,7 +9,9 @@ import {
 const CategoryFilter = () => {
   return (
   <Select>
-    
+    <SelectTrigger>
+        <SelectValue></SelectValue>
+    </SelectTrigger>
   </Select>
     );
 };
