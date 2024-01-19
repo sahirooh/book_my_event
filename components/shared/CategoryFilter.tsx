@@ -7,7 +7,11 @@ import {
 } from "@/components/ui/select";
 
 const CategoryFilter = () => {
-  return <div>CategoryFilter</div>;
+  return (
+  <Select>
+    
+  </Select>
+    );
 };
 
 export default CategoryFilter;
