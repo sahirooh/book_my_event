@@ -17,11 +17,11 @@ const CategoryFilter = () => {
   useEffect(() => {
     const delayDebounceFn = setTimeout(() => {
       let newUrl = "";
-      if (query) {
+      if (categories) {
         const newUrl = formUrlQuery({
           params: searchParams.toString(),
           key: "query",
-          value: query,
+          value: categories,
         });
       } else {
         const newUrl = removeKeysFromQuery({
@@ -34,7 +34,7 @@ const CategoryFilter = () => {
     }, 300);
 
     return () => clearTimeout(delayDebounceFn);
-  }, [query, searchParams, router]);
+  }, [categories, searchParams, router]);
   return (
     <Select>
       <SelectTrigger className="w-[180px]">
