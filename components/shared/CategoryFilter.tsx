@@ -1,3 +1,5 @@
+'use client'
+
 import {
   Select,
   SelectContent,
@@ -35,6 +37,9 @@ const CategoryFilter = () => {
 
     return () => clearTimeout(delayDebounceFn);
   }, [categories, searchParams, router]);
+
+  const onSelectCategory = (category: string) => {};
+
   return (
     <Select>
       <SelectTrigger className="w-[180px]">
