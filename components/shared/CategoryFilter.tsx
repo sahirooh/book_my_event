@@ -41,14 +41,12 @@ const CategoryFilter = () => {
   const onSelectCategory = (category: string) => {};
 
   return (
-    <Select>
-      <SelectTrigger className="w-[180px]">
-        <SelectValue placeholder="Theme" />
+    <Select onValueChange={(value: string) => onSelectCategory(value)}>
+      <SelectTrigger className="select-field">
+        <SelectValue placeholder="Category" />
       </SelectTrigger>
       <SelectContent>
-        <SelectItem value="light">Light</SelectItem>
-        <SelectItem value="dark">Dark</SelectItem>
-        <SelectItem value="system">System</SelectItem>
+        <SelectItem value="All" className="select-item p-regular-14">All</SelectItem>
       </SelectContent>
     </Select>
   );
