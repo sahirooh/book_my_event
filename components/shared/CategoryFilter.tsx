@@ -8,7 +8,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { getAllCategories } from "@/lib/actions/category.actions";
-import { ICategory } from "@/lib/database/models/category.model";
+import Category, { ICategory } from "@/lib/database/models/category.model";
 import { formUrlQuery, removeKeysFromQuery } from "@/lib/utils";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -59,6 +59,9 @@ const CategoryFilter = () => {
       </SelectTrigger>
       <SelectContent>
         <SelectItem value="All" className="select-item p-regular-14">All</SelectItem>
+        {categories.map((category) => (
+          <SelectItem></SelectItem>
+        ))}
       </SelectContent>
     </Select>
   );
