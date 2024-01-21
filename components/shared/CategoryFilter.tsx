@@ -17,6 +17,10 @@ const CategoryFilter = () => {
   const router = useRouter();
 
   useEffect(() => {
+    
+  }, [])
+
+  useEffect(() => {
     const delayDebounceFn = setTimeout(() => {
       let newUrl = "";
       if (categories) {
