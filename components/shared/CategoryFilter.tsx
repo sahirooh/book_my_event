@@ -14,7 +14,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const CategoryFilter = () => {
-  const [categories, setCategories] = useState("");
+  const [categories, setCategories] = useState<ICategory[]>([]);
   const searchParams = useSearchParams();
   const router = useRouter();
 
