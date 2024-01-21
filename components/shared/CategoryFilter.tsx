@@ -7,6 +7,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { getAllCategories } from "@/lib/actions/category.actions";
 import { formUrlQuery, removeKeysFromQuery } from "@/lib/utils";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -17,7 +18,9 @@ const CategoryFilter = () => {
   const router = useRouter();
 
   useEffect(() => {
-    
+    const getCategories = async () => {
+      const categoryList = await getAllCategories();
+    }
   }, [])
 
   useEffect(() => {
