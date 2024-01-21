@@ -24,6 +24,8 @@ const CategoryFilter = () => {
 
       categoryList && setCategories(categoryList as ICategory[])
     }
+
+    getCategories();
   }, [])
 
   useEffect(() => {
