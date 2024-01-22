@@ -29,7 +29,15 @@ const CategoryFilter = () => {
   }, [])
 
   const onSelectCategory = (category: string) => {
+    let newUrl = '';
 
+    if(categories) {
+      newUrl = formUrlQuery({
+        params: searchParams.toString(),
+        key: 'query',
+        value: categories
+      })
+    }
   };
 
   return (
