@@ -43,6 +43,8 @@ const CategoryFilter = () => {
         keysToRemove: ['category']
       })
     }
+
+    router.push(newUrl, {scroll: false})
   };
 
   return (
