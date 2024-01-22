@@ -37,6 +37,11 @@ const CategoryFilter = () => {
         key: 'query',
         value: categories
       })
+    } else {
+      newUrl = removeKeysFromQuery({
+        params: searchParams.toString(),
+        keysToRemove: ['query']
+      })
     }
   };
 
