@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import {
   Select,
@@ -22,29 +22,29 @@ const CategoryFilter = () => {
     const getCategories = async () => {
       const categoryList = await getAllCategories();
 
-      categoryList && setCategories(categoryList as ICategory[])
-    }
+      categoryList && setCategories(categoryList as ICategory[]);
+    };
 
     getCategories();
-  }, [])
+  }, []);
 
   const onSelectCategory = (category: string) => {
-    let newUrl = '';
+    let newUrl = "";
 
-    if(category && category!== 'All') {
+    if (category && category !== "All") {
       newUrl = formUrlQuery({
         params: searchParams.toString(),
-        key: 'query',
-        value: category
-      })
+        key: "query",
+        value: category,
+      });
     } else {
       newUrl = removeKeysFromQuery({
         params: searchParams.toString(),
-        keysToRemove: ['category']
-      })
+        keysToRemove: ["category"],
+      });
     }
 
-    router.push(newUrl, {scroll: false})
+    router.push(newUrl, { scroll: false });
   };
 
   return (
@@ -53,9 +53,17 @@ const CategoryFilter = () => {
         <SelectValue placeholder="Category" />
       </SelectTrigger>
       <SelectContent>
-        <SelectItem value="All" className="select-item p-regular-14">All</SelectItem>
+        <SelectItem value="All" className="select-item p-regular-14">
+          All
+        </SelectItem>
         {categories.map((category) => (
-          <SelectItem value={category.name} key={category._id} className="select-item p-regular-14">{category.name}</SelectItem>
+          <SelectItem
+            value={category.name}
+            key={category._id}
+            className="select-item p-regular-14"
+          >
+            {category.name}
+          </SelectItem>
         ))}
       </SelectContent>
     </Select>
