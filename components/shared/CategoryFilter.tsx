@@ -35,12 +35,12 @@ const CategoryFilter = () => {
       newUrl = formUrlQuery({
         params: searchParams.toString(),
         key: 'query',
-        value: categories
+        value: category
       })
     } else {
       newUrl = removeKeysFromQuery({
         params: searchParams.toString(),
-        keysToRemove: ['query']
+        keysToRemove: ['category']
       })
     }
   };
