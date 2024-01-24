@@ -1,35 +1,33 @@
-'use client'
+"use client";
 
-import { useRouter, useSearchParams } from 'next/navigation'
-import { Button } from '../ui/button'
+import { useRouter, useSearchParams } from "next/navigation";
+import { Button } from "../ui/button";
 
 type PaginationProps = {
-    page: number | string,
-    totalPages: number,
-    urlParamName: string
-}
+  page: number | string;
+  totalPages: number;
+  urlParamName: string;
+};
 
-const Pagination = ({urlParamName, page, totalPages}: PaginationProps) => {
-  
-    const router = useRouter()
-    const searchParams = useSearchParams()
+const Pagination = ({ urlParamName, page, totalPages }: PaginationProps) => {
+  const router = useRouter();
+  const searchParams = useSearchParams();
 
-    const onClick = (btnType: string) => {
+  const onClick = (btnType: string) => {};
 
-    }
-  
-    return (
-    <div className='flex gap-2'>
+  return (
+    <div className="flex gap-2">
       <Button
-      size='lg'
-      variant='outline'
-      className='w-28'
-      onClick={() => onClick('prev')}
-      disabled={Number(page) <= 1}>
+        size="lg"
+        variant="outline"
+        className="w-28"
+        onClick={() => onClick("prev")}
+        disabled={Number(page) <= 1}
+      >
         Previous
       </Button>
     </div>
-  )
-}
+  );
+};
 
-export default Pagination
+export default Pagination;
