@@ -12,6 +12,10 @@ const Pagination = ({urlParamName, page, totalPages}: PaginationProps) => {
   
     const router = useRouter()
     const searchParams = useSearchParams()
+
+    const onClick = (btnType: string) => {
+      
+    }
   
     return (
     <div>Pagination</div>
