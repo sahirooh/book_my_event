@@ -1,6 +1,7 @@
 'use client'
 
 import { useRouter, useSearchParams } from 'next/navigation'
+import { Button } from '../ui/button'
 
 type PaginationProps = {
     page: number | string,
@@ -14,11 +15,15 @@ const Pagination = ({urlParamName, page, totalPages}: PaginationProps) => {
     const searchParams = useSearchParams()
 
     const onClick = (btnType: string) => {
-      
+
     }
   
     return (
-    <div>Pagination</div>
+    <div className='flex gap-2'>
+      <Button>
+        
+      </Button>
+    </div>
   )
 }
 
