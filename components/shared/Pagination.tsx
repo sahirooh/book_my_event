@@ -1,7 +1,6 @@
 'use client'
 
 import { useRouter, useSearchParams } from 'next/navigation'
-import React from 'react'
 
 type PaginationProps = {
     page: number | string,
