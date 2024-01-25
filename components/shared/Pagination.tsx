@@ -14,7 +14,7 @@ const Pagination = ({ urlParamName, page, totalPages }: PaginationProps) => {
   const searchParams = useSearchParams();
 
   const onClick = (btnType: string) => {
-    const pageValue = btnType === 'next' ? Number(page) + 1 : Number(page) - 1;
+    const pageValue = btnType === "next" ? Number(page) + 1 : Number(page) - 1;
   };
 
   return (
@@ -30,11 +30,12 @@ const Pagination = ({ urlParamName, page, totalPages }: PaginationProps) => {
       </Button>
 
       <Button
-      size='lg'
-      variant='outline'
-      className="w-28"
-      onClick={() => onClick('next')}
-      disabled={Number(page) >= totalPages}>
+        size="lg"
+        variant="outline"
+        className="w-28"
+        onClick={() => onClick("next")}
+        disabled={Number(page) >= totalPages}
+      >
         Next
       </Button>
     </div>
