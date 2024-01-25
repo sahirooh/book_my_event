@@ -13,7 +13,9 @@ const Pagination = ({ urlParamName, page, totalPages }: PaginationProps) => {
   const router = useRouter();
   const searchParams = useSearchParams();
 
-  const onClick = (btnType: string) => {};
+  const onClick = (btnType: string) => {
+    const pageValue = btnType === 'next' ? Number(page) + 1 : Number(page) - 1;
+  };
 
   return (
     <div className="flex gap-2">
