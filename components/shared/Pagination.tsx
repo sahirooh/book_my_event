@@ -28,7 +28,10 @@ const Pagination = ({ urlParamName, page, totalPages }: PaginationProps) => {
       </Button>
 
       <Button
-      size='lg'>
+      size='lg'
+      variant='outline'
+      className="w-28"
+      >
         Next
       </Button>
     </div>
