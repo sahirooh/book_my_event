@@ -26,6 +26,10 @@ const Pagination = ({ urlParamName, page, totalPages }: PaginationProps) => {
       >
         Previous
       </Button>
+
+      <Button>
+        
+      </Button>
     </div>
   );
 };
