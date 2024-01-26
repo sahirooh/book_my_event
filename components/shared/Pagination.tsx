@@ -19,11 +19,11 @@ const Pagination = ({ urlParamName, page, totalPages }: PaginationProps) => {
 
     const newUrl = formUrlQuery({
       params: searchParams.toString(),
-      key: urlParamName || 'page',
+      key: urlParamName || "page",
       value: pageValue.toString(),
-    })
+    });
 
-    router.push(newUrl, {scroll: false})
+    router.push(newUrl, { scroll: false });
   };
 
   return (
