@@ -62,7 +62,7 @@ const category = (searchParams?.category as string) || '';
           emptyStateSubtext="Come back later"
           collectionType="All_Events"
           limit={6}
-          page={1}
+          page={page}
           totalPages={event?.totalPages}
         />
       </section>
