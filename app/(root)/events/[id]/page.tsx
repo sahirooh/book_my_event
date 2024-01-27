@@ -1,19 +1,25 @@
 import CheckoutButton from "@/components/shared/CheckoutButton";
 import Collection from "@/components/shared/Collection";
-import { getEventById, getRelatedEventsByCategory } from "@/lib/actions/event.actions";
+import {
+  getEventById,
+  getRelatedEventsByCategory,
+} from "@/lib/actions/event.actions";
 import { formatDateTime } from "@/lib/utils";
 import { SearchParamProps } from "@/types";
 import Image from "next/image";
 import React from "react";
 
-const EventDetails = async ({ params: { id }, searchParams }: SearchParamProps) => {
+const EventDetails = async ({
+  params: { id },
+  searchParams,
+}: SearchParamProps) => {
   const event = await getEventById(id);
 
   const relatedEvents = await getRelatedEventsByCategory({
     categoryId: event.category._id,
     eventId: event._id,
     page: searchParams.page as string,
-  })
+  });
 
   return (
     <>
@@ -71,7 +77,6 @@ const EventDetails = async ({ params: { id }, searchParams }: SearchParamProps) 
                   </p>
                 </div>
               </div>
-
               <div className="p-regular-20 flex items-center gap-3">
                 <Image
                   src="/assets/icons/location.svg"
@@ -81,7 +86,8 @@ const EventDetails = async ({ params: { id }, searchParams }: SearchParamProps) 
                 />
                 <p className="p-medium-16 lg:p-regular-20">{event.location}</p>
               </div>
-            C</div>
+              C
+            </div>
 
             <div className="flex flex-col gap-2">
               <p className="p-bold-20 text-grey-600">What You'll Learn:</p>
