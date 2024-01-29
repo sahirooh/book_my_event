@@ -15,6 +15,7 @@ type CollectionProps = {
 };
 
 const Collection = ({
+  data,
   emptyTitle,
   limit,
   page,
