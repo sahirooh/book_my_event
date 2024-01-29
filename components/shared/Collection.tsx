@@ -17,7 +17,6 @@ type CollectionProps = {
 const Collection = ({
   data,
   emptyTitle,
-  emptyStateSubtext,
   limit,
   page,
   totalPages = 0,
