@@ -15,6 +15,7 @@ type FileUploaderProps = {
 };
 
 export function FileUploader({
+  setFiles,
 }: FileUploaderProps) {
   const onDrop = useCallback((acceptedFiles: FileWithPath[]) => {
     setFiles(acceptedFiles);
