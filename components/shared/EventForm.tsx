@@ -87,8 +87,7 @@ const EventForm = ({ userId, type, event, eventId }: EventFormProps) => {
     }
 
     if (type === "Update") {
-
-      if(!eventId) {
+      if (!eventId) {
         router.back();
         return;
       }
