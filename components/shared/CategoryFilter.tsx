@@ -29,7 +29,6 @@ const CategoryFilter = () => {
   }, []);
 
   const onSelectCategory = (category: string) => {
-    let newUrl = "";
 
     if (category && category !== "All") {
       newUrl = formUrlQuery({
