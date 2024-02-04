@@ -11,7 +11,6 @@ import { convertFileToUrl } from "@/lib/utils";
 type FileUploaderProps = {
   onFieldChange: (url: string) => void;
   imageUrl: string;
-  setFiles: Dispatch<SetStateAction<File[]>>;
 };
 
 export function FileUploader({
