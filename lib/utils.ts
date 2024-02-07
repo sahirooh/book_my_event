@@ -38,6 +38,7 @@ export const formatDateTime = (dateString: Date) => {
   );
 
   const formattedDate: string = new Date(dateString).toLocaleString(
+    "en-US",
     dateOptions
   );
 
