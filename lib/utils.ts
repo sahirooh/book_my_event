@@ -12,7 +12,7 @@ export function cn(...inputs: ClassValue[]) {
 export const formatDateTime = (dateString: Date) => {
   const dateTimeOptions: Intl.DateTimeFormatOptions = {
     weekday: "short", 
-    month: "short", // abbreviated month name (e.g., 'Oct')
+    month: "short",
     day: "numeric", // numeric day of the month (e.g., '25')
     hour: "numeric", // numeric hour (e.g., '8')
     minute: "numeric", // numeric minute (e.g., '30')
