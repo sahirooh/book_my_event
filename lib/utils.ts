@@ -15,7 +15,7 @@ export const formatDateTime = (dateString: Date) => {
     month: "short",
     day: "numeric", 
     hour: "numeric", 
-    minute: "numeric", // numeric minute (e.g., '30')
+    minute: "numeric", 
     hour12: true, // use 12-hour clock (true) or 24-hour clock (false)
   };
 
