@@ -11,7 +11,6 @@ export function cn(...inputs: ClassValue[]) {
 
 export const formatDateTime = (dateString: Date) => {
   const dateTimeOptions: Intl.DateTimeFormatOptions = {
-    weekday: "short", 
     month: "short",
     day: "numeric", 
     hour: "numeric", 
