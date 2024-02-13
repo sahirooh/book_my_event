@@ -3,7 +3,6 @@ import { Document, Schema, model, models } from "mongoose";
 export interface IEvent extends Document {
     _id: string;
     title: string;
-    description?: string;
     location?: string;
     createdAt: Date;
     imageUrl: string;
