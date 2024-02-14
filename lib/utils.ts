@@ -22,7 +22,7 @@ export const formatDateTime = (dateString: Date) => {
   const dateOptions: Intl.DateTimeFormatOptions = {
     weekday: "short", 
     month: "short", 
-    year: "numeric", // numeric year (e.g., '2023')
+    year: "numeric", 
     day: "numeric", // numeric day of the month (e.g., '25')
   };
 
