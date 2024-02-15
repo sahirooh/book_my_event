@@ -23,7 +23,7 @@ export const formatDateTime = (dateString: Date) => {
     weekday: "short", 
     month: "short", 
     year: "numeric", 
-    day: "numeric", // numeric day of the month (e.g., '25')
+    day: "numeric", 
   };
 
   const timeOptions: Intl.DateTimeFormatOptions = {
