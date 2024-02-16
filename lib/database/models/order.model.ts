@@ -6,7 +6,6 @@ export interface IOrder extends Document {
   totalAmount: string;
   event: {
     _id: string;
-    title: string;
   };
   buyer: {
     _id: string;
