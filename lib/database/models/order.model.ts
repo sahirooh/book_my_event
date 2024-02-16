@@ -5,6 +5,7 @@ export interface IOrder extends Document {
   stripeId: string;
   totalAmount: string;
   event: {
+    _id: string;
     title: string;
   };
   buyer: {
