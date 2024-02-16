@@ -4,7 +4,6 @@ export interface IOrder extends Document {
   createdAt: Date;
   stripeId: string;
   totalAmount: string;
-  event: {
     _id: string;
     title: string;
   };
