@@ -25,7 +25,6 @@ export type IOrderItem = {
 };
 
 const OrderSchema = new Schema({
-  createdAt: {
     type: Date,
     default: Date.now,
   },
