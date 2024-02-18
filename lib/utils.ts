@@ -29,7 +29,7 @@ export const formatDateTime = (dateString: Date) => {
   const timeOptions: Intl.DateTimeFormatOptions = {
     hour: "numeric", 
     minute: "numeric",
-    hour12: true, // use 12-hour clock (true) or 24-hour clock (false)
+    hour12: true, 
   };
 
   const formattedDateTime: string = new Date(dateString).toLocaleString(
