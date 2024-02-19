@@ -61,7 +61,6 @@ export async function getEventById(eventId: string) {
 
     if (!event) throw new Error("Event not found");
 
-    return JSON.parse(JSON.stringify(event));
   } catch (error) {
     handleError(error);
   }
