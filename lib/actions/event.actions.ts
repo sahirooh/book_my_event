@@ -76,7 +76,6 @@ export async function updateEvent({ userId, event, path }: UpdateEventParams) {
       throw new Error("Unauthorized or event not found");
     }
 
-    const updatedEvent = await Event.findByIdAndUpdate(
       event._id,
       { ...event, category: event.categoryId },
       { new: true }
