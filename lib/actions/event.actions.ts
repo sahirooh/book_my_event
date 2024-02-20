@@ -77,6 +77,7 @@ export async function updateEvent({ userId, event, path }: UpdateEventParams) {
     }
 
     const updatedEvent = await Event.findByIdAndUpdate(
+      event._id,
       { ...event, category: event.categoryId },
       { new: true }
     );
