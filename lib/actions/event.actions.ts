@@ -89,7 +89,7 @@ export async function updateEvent({ userId, event, path }: UpdateEventParams) {
   }
 }
 
-// DELETE
+
 export async function deleteEvent({ eventId, path }: DeleteEventParams) {
   try {
     await connectToDatabase();
