@@ -94,6 +94,7 @@ export async function deleteEvent({ eventId, path }: DeleteEventParams) {
   try {
     await connectToDatabase();
 
+    const deletedEvent = await Event.findByIdAndDelete(eventId);
     if (deletedEvent) revalidatePath(path);
   } catch (error) {
     handleError(error);
