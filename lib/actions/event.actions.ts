@@ -113,6 +113,7 @@ export async function getAllEvents({
     const titleCondition = query
       ? { title: { $regex: query, $options: "i" } }
       : {};
+    const categoryCondition = category
       ? await getCategoryByName(category)
       : null;
     const conditions = {
