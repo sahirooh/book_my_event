@@ -114,6 +114,7 @@ export async function getAllEvents({
       ? { title: { $regex: query, $options: "i" } }
       : {};
     const categoryCondition = category
+      ? await getCategoryByName(category)
       : null;
     const conditions = {
       $and: [
