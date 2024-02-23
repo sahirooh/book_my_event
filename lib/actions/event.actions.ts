@@ -111,7 +111,6 @@ export async function getAllEvents({
     await connectToDatabase();
 
     const titleCondition = query
-      ? { title: { $regex: query, $options: "i" } }
       : {};
     const categoryCondition = category
       ? await getCategoryByName(category)
