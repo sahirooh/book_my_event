@@ -169,7 +169,6 @@ export async function getEventsByUser({
   }
 }
 
-// GET RELATED EVENTS: EVENTS WITH SAME CATEGORY
 export async function getRelatedEventsByCategory({
   categoryId,
   eventId,
