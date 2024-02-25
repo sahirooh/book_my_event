@@ -65,7 +65,6 @@ export const createOrder = async (order: CreateOrderParams) => {
   }
 };
 
-// GET ORDERS BY EVENT
 export async function getOrdersByEvent({
   searchString,
   eventId,
