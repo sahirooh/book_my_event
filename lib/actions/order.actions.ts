@@ -69,6 +69,7 @@ export async function getOrdersByEvent({
   searchString,
   eventId,
 }: GetOrdersByEventParams) {
+  try {
     await connectToDatabase();
 
     if (!eventId) throw new Error("Event ID is required");
