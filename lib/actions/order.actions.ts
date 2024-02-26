@@ -126,7 +126,6 @@ export async function getOrdersByEvent({
   }
 }
 
-// GET ORDERS BY USER
 export async function getOrdersByUser({
   userId,
   limit = 3,
