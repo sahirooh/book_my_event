@@ -68,6 +68,7 @@ export const createOrder = async (order: CreateOrderParams) => {
 export async function getOrdersByEvent({
   searchString,
   eventId,
+}: GetOrdersByEventParams) {
   try {
     await connectToDatabase();
 
