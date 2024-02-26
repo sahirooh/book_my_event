@@ -70,6 +70,7 @@ export async function getOrdersByEvent({
   eventId,
 }: GetOrdersByEventParams) {
   try {
+    await connectToDatabase();
 
     if (!eventId) throw new Error("Event ID is required");
     const eventObjectId = new ObjectId(eventId);
