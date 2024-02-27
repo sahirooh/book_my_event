@@ -132,6 +132,7 @@ export async function getOrdersByUser({
   page,
 }: GetOrdersByUserParams) {
   try {
+    
     await connectToDatabase();
 
     const skipAmount = (Number(page) - 1) * limit;
