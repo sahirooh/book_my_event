@@ -11,25 +11,25 @@ export function cn(...inputs: ClassValue[]) {
 
 export const formatDateTime = (dateString: Date) => {
   const dateTimeOptions: Intl.DateTimeFormatOptions = {
-    weekday: "short", 
+    weekday: "short",
     month: "short",
-    day: "numeric", 
-    hour: "numeric", 
-    minute: "numeric", 
-    hour12: true, 
+    day: "numeric",
+    hour: "numeric",
+    minute: "numeric",
+    hour12: true,
   };
 
   const dateOptions: Intl.DateTimeFormatOptions = {
-    weekday: "short", 
-    month: "short", 
-    year: "numeric", 
-    day: "numeric", 
+    weekday: "short",
+    month: "short",
+    year: "numeric",
+    day: "numeric",
   };
 
   const timeOptions: Intl.DateTimeFormatOptions = {
-    hour: "numeric", 
+    hour: "numeric",
     minute: "numeric",
-    hour12: true, 
+    hour12: true,
   };
 
   const formattedDateTime: string = new Date(dateString).toLocaleString(
