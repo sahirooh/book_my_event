@@ -139,6 +139,7 @@ export async function getOrdersByUser({
     const conditions = { buyer: userId };
 
     const orders = await Order.distinct("event._id")
+      .find(conditions)
       .sort({ createdAt: "desc" })
       .skip(skipAmount)
       .limit(limit)
