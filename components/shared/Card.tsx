@@ -48,7 +48,6 @@ const Card = ({ event, hasOrderLink, hidePrice }: CardProps) => {
             </p>
           </div>
         )}
-// Need to add a space between the two p tags
         <p className="p-medium-16 p-medium-18 text-grey-500">
           {formatDateTime(event.startDateTime).dateTime}
         </p>
