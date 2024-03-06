@@ -48,6 +48,7 @@ const CategoryFilter = () => {
       <SelectContent>
         <SelectItem value="All" className="select-item p-regular-14">
           All
+        </SelectItem>
         {categories.map((category) => (
           <SelectItem
             value={category.name}
