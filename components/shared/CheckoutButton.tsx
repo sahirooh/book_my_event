@@ -1,5 +1,5 @@
 "use client";
-// client components
+
 import { IEvent } from "@/lib/database/models/event.model";
 import { SignedIn, SignedOut, useUser } from "@clerk/nextjs";
 import React from "react";
