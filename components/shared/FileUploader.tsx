@@ -14,8 +14,8 @@ type FileUploaderProps = {
 };
 
 // uploader needs to be checked
-export function FileUploader({
-  imageUrl,
+export function FileUploader({ // eslint-disable-line @typescript-eslint/explicit-module-boundary-types
+  imageUrl, 
   onFieldChange,
   setFiles,
 }: FileUploaderProps) {
