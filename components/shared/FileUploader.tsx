@@ -34,7 +34,7 @@ export function FileUploader({ // eslint-disable-line @typescript-eslint/explici
       className="flex-center bg-dark-3 flex h-72 cursor-pointer flex-col overflow-hidden rounded-xl bg-grey-50"
     >
       <input {...getInputProps()} className="cursor-pointer" />
-
+// imageUrl is the image url from the server
       {imageUrl ? (
         <div className="flex h-full w-full flex-1 justify-center ">
           <img
