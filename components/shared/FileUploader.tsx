@@ -39,6 +39,7 @@ export function FileUploader({ // eslint-disable-line @typescript-eslint/explici
         <div className="flex h-full w-full flex-1 justify-center ">
           <img
             src={imageUrl}
+            alt="image"
             width={250}
             height={250}
             className="w-full object-cover object-center"
