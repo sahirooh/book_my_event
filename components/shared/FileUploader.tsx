@@ -49,8 +49,8 @@ export function FileUploader({ // eslint-disable-line @typescript-eslint/explici
         <div className="flex-center flex-col py-5 text-grey-500">
           <img
             src="/assets/icons/upload.svg"
-            width={77}
-            height={77}
+            width={77} 
+            height={77} 
             alt="file upload"
           />
           <h3 className="mb-2 mt-2">Drag photo here</h3>
@@ -58,6 +58,7 @@ export function FileUploader({ // eslint-disable-line @typescript-eslint/explici
           <Button type="button" className="rounded-full">
             Select from computer
           </Button>
+          // imageUrl is the image url from the server @typescript-eslint/explicit-module-boundary-types
         </div>
       )}
     </div>
