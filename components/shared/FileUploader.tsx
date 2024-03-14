@@ -19,6 +19,7 @@ export function FileUploader({ // eslint-disable-line @typescript-eslint/explici
   setFiles,
 }: FileUploaderProps) {
   const onDrop = useCallback((acceptedFiles: FileWithPath[]) => {
+    setFiles(acceptedFiles);
     onFieldChange(convertFileToUrl(acceptedFiles[0]));
   }, []);
 
