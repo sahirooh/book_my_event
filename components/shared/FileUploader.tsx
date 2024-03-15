@@ -58,7 +58,6 @@ export function FileUploader({ // eslint-disable-line @typescript-eslint/explici
           <p className="p-medium-12 mb-4">SVG, PNG, JPG</p>
           <Button type="button" className="rounded-full">
             Select from computer
-          </Button>
           // imageUrl is the image url from the server @typescript-eslint/explicit-module-boundary-types
         </div>
       )}
