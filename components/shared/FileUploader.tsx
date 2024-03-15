@@ -60,6 +60,7 @@ export function FileUploader({ // eslint-disable-line @typescript-eslint/explici
             Select from computer
           </Button>
           // imageUrl is the image url from the server @typescript-eslint/explicit-module-boundary-types
+        </div>
       )}
     </div>
   );
