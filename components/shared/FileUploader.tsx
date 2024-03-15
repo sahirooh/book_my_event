@@ -19,7 +19,8 @@ export function FileUploader({ // eslint-disable-line @typescript-eslint/explici
   setFiles,
 }: FileUploaderProps) {
   const onDrop = useCallback((acceptedFiles: FileWithPath[]) => {
-    setFiles(acceptedFiles);
+    setFiles(acceptedFiles); 
+    // file is the image file from the client of type FileWithPath
     onFieldChange(convertFileToUrl(acceptedFiles[0]));
   }, []);
 
@@ -38,7 +39,7 @@ export function FileUploader({ // eslint-disable-line @typescript-eslint/explici
       {imageUrl ? (
         <div className="flex h-full w-full flex-1 justify-center ">
           <img
-            src={imageUrl}
+            src={imageUrl} // the image url is missing
             alt="image"
             width={250}
             height={250}
