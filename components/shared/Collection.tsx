@@ -16,7 +16,7 @@ type CollectionProps = {
 // up to date
 const Collection = ({
   data,
-  emptyTitle,
+  
   emptyStateSubtext,
   collectionType,
   limit,
