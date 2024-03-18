@@ -11,7 +11,7 @@ export const headerLinks = [
     route: "/profile",
   },
 ];
-
+// default values
 export const eventDefaultValues = {
   title: "",
   description: "",
