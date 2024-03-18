@@ -13,7 +13,7 @@ export const headerLinks = [
 ];
 // default values
 export const eventDefaultValues = {
-  
+  title: "",
   description: "",
   location: "",
   imageUrl: "",
