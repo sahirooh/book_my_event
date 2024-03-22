@@ -13,7 +13,7 @@ type FileUploaderProps = {
   setFiles: Dispatch<SetStateAction<File[]>>;
 };
 
-export function FileUploader({ // eslint-disable-line @typescript-eslint/explicit-module-boundary-types
+export function FileUploader({ 
   imageUrl, 
   onFieldChange,
   setFiles,
