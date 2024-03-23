@@ -15,7 +15,7 @@ type CollectionProps = {
 };
 // collection needs to be rechecked
 const Collection = ({
-  data,
+  
   emptyTitle,
   emptyStateSubtext,
   collectionType,
