@@ -4,7 +4,7 @@ import { auth } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
 import { DeleteConfirm } from "./DeleteConfirm";
-
+// cardProps type is to be rechecked
 type CardProps = {
   event: IEvent;
   hasOrderLink?: boolean;
