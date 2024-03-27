@@ -51,7 +51,7 @@ export function FileUploader({
           <img
             src="/assets/icons/upload.svg"
             width={77} 
-            
+            height={77} 
             alt="file upload"
           />
           <h3 className="mb-2 mt-2">Drag photo here</h3>
