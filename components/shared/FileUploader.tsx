@@ -20,7 +20,7 @@ export function FileUploader({
 }: FileUploaderProps) {
   const onDrop = useCallback((acceptedFiles: FileWithPath[]) => {
     setFiles(acceptedFiles); 
-    // file is the image file from the client of type FileWithPath
+    
     onFieldChange(convertFileToUrl(acceptedFiles[0]));
   }, []);
 
