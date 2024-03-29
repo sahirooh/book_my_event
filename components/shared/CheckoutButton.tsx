@@ -14,7 +14,7 @@ const CheckoutButton = ({ event }: { event: IEvent }) => {
 // event prop showing err
   return (
     <div className="flex items-center gap-3">
-      {hasEventFinished ? (
+      
         <p className="p-2 text-red-400">Tickets are no longer available</p>
       ) : (
         <>
