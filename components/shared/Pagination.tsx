@@ -3,7 +3,7 @@
 import { useRouter, useSearchParams } from "next/navigation";
 import { Button } from "../ui/button";
 import { formUrlQuery } from "@/lib/utils";
-// pagination needs to be checked
+
 type PaginationProps = {
   page: number | string;
   totalPages: number;
