@@ -39,7 +39,7 @@ export function FileUploader({
       {imageUrl ? (
         <div className="flex h-full w-full flex-1 justify-center ">
           <img
-            src={imageUrl} // the image url is missing
+            src={imageUrl} 
             alt="image"
             width={250}
             height={250}
