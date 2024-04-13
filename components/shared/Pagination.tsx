@@ -6,7 +6,7 @@ import { formUrlQuery } from "@/lib/utils";
 
 type PaginationProps = {
   page: number | string;
-  
+  totalPages: number;
   urlParamName: string;
 };
 
