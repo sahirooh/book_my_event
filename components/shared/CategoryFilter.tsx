@@ -28,7 +28,7 @@ const CategoryFilter = () => {
       newUrl = formUrlQuery({
         params: searchParams.toString(),
         key: "query",
-        value: category,
+        
       });
     } else {
       newUrl = removeKeysFromQuery({
