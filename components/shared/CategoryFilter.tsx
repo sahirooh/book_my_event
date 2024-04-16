@@ -10,7 +10,7 @@ const CategoryFilter = () => {
   const [categories, setCategories] = useState<ICategory[]>([]);
   const searchParams = useSearchParams();
   const router = useRouter();
-
+// useEffect needs to be checked
   useEffect(() => {
     const getCategories = async () => {
       const categoryList = await getAllCategories();
