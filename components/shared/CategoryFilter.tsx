@@ -13,7 +13,7 @@ const CategoryFilter = () => {
 
   useEffect(() => {
     const getCategories = async () => {
-      
+      const categoryList = await getAllCategories();
 
       categoryList && setCategories(categoryList as ICategory[]);
     };
