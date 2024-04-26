@@ -49,7 +49,7 @@ const Collection = ({
             <Pagination
               urlParamName={urlParamName}
               page={page}
-              
+              totalPages={totalPages}
             />
           )}
         </div>
