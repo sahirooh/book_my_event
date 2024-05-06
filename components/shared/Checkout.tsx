@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+
 import { Button } from "../ui/button";
 import { IEvent } from "@/lib/database/models/event.model";
 
