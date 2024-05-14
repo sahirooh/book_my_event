@@ -59,7 +59,7 @@ export function FileUploader({
           <Button type="button" className="rounded-full">
             Select from computer
           </Button>
-          // imageUrl is the image url from the server @typescript-eslint/explicit-module-boundary-types
+          // imageUrl is the image url from the server 
         </div>
       )}
     </div>
