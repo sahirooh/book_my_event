@@ -20,7 +20,7 @@ const Pagination = ({ urlParamName, page, totalPages }: PaginationProps) => {
 
     const newUrl = formUrlQuery({
       params: searchParams.toString(),
-      
+      key: urlParamName || "page",
       value: pageValue.toString(),
     });
 
