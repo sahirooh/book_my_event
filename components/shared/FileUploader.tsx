@@ -12,7 +12,7 @@ type FileUploaderProps = {
   imageUrl: string;
   setFiles: Dispatch<SetStateAction<File[]>>;
 };
-
+// FileUploader needs fixes
 export function FileUploader({ 
   imageUrl, 
   onFieldChange,
