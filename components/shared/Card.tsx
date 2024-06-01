@@ -68,7 +68,7 @@ const Card = ({ event, hasOrderLink, hidePrice }: CardProps) => {
                 src="/assets/icons/arrow.svg"
                 alt="search"
                 width={10}
-                height={10}
+                
               />
             </Link>
           )}
