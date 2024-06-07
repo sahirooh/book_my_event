@@ -14,7 +14,7 @@ type FileUploaderProps = {
 };
 // FileUploader needs to be checked
 export function FileUploader({ 
-  
+  imageUrl, 
   onFieldChange,
   setFiles,
 }: FileUploaderProps) {
