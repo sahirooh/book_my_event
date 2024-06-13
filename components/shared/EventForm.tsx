@@ -32,7 +32,7 @@ import { IEvent } from "@/lib/database/models/event.model";
 
 type EventFormProps = {
   userId: string;
-  type: "Create" | "Update";
+  
   event?: IEvent;
   eventId?: string;
 };
