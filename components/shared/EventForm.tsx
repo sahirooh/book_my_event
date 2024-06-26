@@ -29,7 +29,7 @@ import { Checkbox } from "../ui/checkbox";
 import { useRouter } from "next/navigation";
 import { createEvent, updateEvent } from "@/lib/actions/event.actions";
 import { IEvent } from "@/lib/database/models/event.model";
-
+// EventFormProps needs to be checked
 type EventFormProps = {
   userId: string;
   type: "Create" | "Update";
