@@ -29,7 +29,7 @@ const Card = ({ event, hasOrderLink, hidePrice }: CardProps) => {
           <Link href={`/events/${event._id}/update`}>
             <Image
               src="/assets/icons/edit.svg"
-              
+              alt="edit"
               width={20}
               height={20}
             />
