@@ -31,7 +31,7 @@ const Card = ({ event, hasOrderLink, hidePrice }: CardProps) => {
               src="/assets/icons/edit.svg"
               alt="edit"
               width={20}
-              
+              height={20}
             />
           </Link>
         <DeleteConfirm eventId={event._id} />
