@@ -17,7 +17,7 @@ const SheetPortal = SheetPrimitive.Portal
 // SheetOverlay needs to be checked
 const SheetOverlay = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Overlay>,
-  React.ComponentPropsWithoutRef<typeof SheetPrimitive.Overlay>
+  
 >(({ className, ...props }, ref) => (
   <SheetPrimitive.Overlay
     className={cn(
