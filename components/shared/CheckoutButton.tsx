@@ -11,7 +11,7 @@ const CheckoutButton = ({ event }: { event: IEvent }) => {
   const { user } = useUser();
   const userId = user?.publicMetadata.userId as string;
   const hasEventFinished = new Date(event.endDateTime) < new Date();
-// ChechoutButton is not centered
+
   return (
     <div className="flex items-center gap-3">
       {hasEventFinished ? (
