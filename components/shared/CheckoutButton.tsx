@@ -13,7 +13,7 @@ const CheckoutButton = ({ event }: { event: IEvent }) => {
   const hasEventFinished = new Date(event.endDateTime) < new Date();
 // CheckoutButton is not centered
   return (
-    <div className="flex items-center gap-3">
+    
       {hasEventFinished ? (
         <p className="p-2 text-red-400">Tickets are no longer available</p>
       ) : (
